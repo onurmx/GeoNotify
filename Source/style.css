@@ -1,0 +1,126 @@
+html, body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#notificationbar {
+    float: right;
+    width: 20%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#mapid {
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+}
+#panel {
+    float: left;
+    height: 100%;
+    width: 25%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#title {
+    background-color: lightseagreen;
+    text-align: center;
+}
+#departuretime {
+    width: 100%;
+    text-align: center;
+}
+#arrivaltime {
+    width: 100%;
+    text-align: center;
+}
+#address{
+    width: 100%;
+    height: 25px;
+}
+#waypointnote{
+    width: 100%;
+    height: 60px;
+    resize: none;
+    margin: 0;
+    padding: 0;
+}
+#buttons{
+    width: 100%;
+}
+#addresstopath{
+    float: left;
+    width: 50%;
+}
+#positiontopath{
+    float: right;
+    width: 50%;
+}
+#mainbuttons{
+    width: 100%;
+}
+#calculate{
+    float: left;
+    width: 50%;
+}
+#reset{
+    float: right;
+    width: 50%;
+}
+#guide{
+    bottom: 0;
+    width: 100%;
+}
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+.button {
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+}
+#addresstopathbutton{
+    background-color: #370299;
+}
+#addresstopathbutton:hover{
+    background-color: #9359fd;
+    transition: 0.3s;
+}
+#positiontopathbutton{
+    background-color: #15774f;
+}
+#positiontopathbutton:hover{
+    background-color: #22bf7f;
+    transition: 0.3s;
+}
+#calculatebutton{
+    background-color: #009b02;
+}
+#calculatebutton:hover{
+    background-color: #00df02;
+    transition: 0.3s;
+}
+#resetbutton{
+    background-color: #b00400;
+}
+#resetbutton:hover{
+    background-color: #e30500;
+    transition: 0.3s;
+}

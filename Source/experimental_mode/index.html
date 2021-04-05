@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoNotify</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="lib/lrm-graphhopper-1.2.0.js"></script>
+    <script src="https://unpkg.com/esri-leaflet@2.5.1/dist/esri-leaflet.js"
+        integrity="sha512-q7X96AASUF0hol5Ih7AeZpRF6smJS55lcvy+GLWzJfZN+31/BQ8cgNx2FGF+IQSA4z2jHwB20vml+drmooqzzQ=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.css"
+        integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+        crossorigin="">
+    <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.js"
+        integrity="sha512-HrFUyCEtIpxZloTgEKKMq4RFYhxjJkCiF5sDxuAokklOeZ68U2NPfh4MFtyIVWlsKtVbK5GD2/JzFyAfvT5ejA=="
+        crossorigin=""></script>
+</head>
+
+<body>
+    <div id="panel">
+        <div id="title">Add to path</div>
+        <input id="address" placeholder="Enter waypoint address">
+        <div id="title">Arrival Time</div>
+        <input type="time" id="arrivaltime">
+        <div id="title">Add note</div>
+        <textarea id="waypointnote" name="waypointnote"></textarea>
+        <div id="buttons">
+            <div id="addresstopath" onclick="addresstopath()">
+                <button id="addresstopathbutton" class="button">Add Address to Path</button>
+            </div>
+            <div id="positiontopath" onclick="positiontopath()">
+                <button id="positiontopathbutton" class="button">Add Current Position to Path</button>
+            </div>
+        </div>
+        <div>
+            <table id="routetable">
+                <tr>
+                    <th>Waypoint no</th>
+                    <th>Waypoint address</th>
+                    <th>Arrival Time</th>
+                    <th>Note</th>
+                </tr>
+            </table>
+        </div>
+        <div id="mainbuttons">
+            <div id="calculate" onclick="calculateRoute()">
+                <button id="calculatebutton" class="button">Calculate!</button>
+            </div>
+            <div id="reset" onclick="reset()">
+                <button id="resetbutton" class="button">Reset</button>
+            </div>
+        </div>
+        <div id="guide">
+            <a href="../index.html">Turn Back to Normal Mode</a>
+        </div>
+    </div>
+    <div id="mapid"></div>
+    <div id="notificationbar">
+        <table id="notificationtable">
+            <tr>
+                <th>Time</th>
+                <th>Notification</th>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="source.js"></script>
+</body>
+
+</html>
