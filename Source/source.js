@@ -169,7 +169,7 @@ function calculateRoute() {
         control = L.Routing.control({
             waypoints,
             routeWhileDragging: true,
-            router: L.Routing.graphHopper('d9af332d-2991-4fa4-ae96-8867d72b2f95')
+            router: L.Routing.graphHopper('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx')
         });
         control.addTo(map);
         control.on('routesfound', function (e) {
